@@ -91,6 +91,10 @@ if ! command -v sudo &>/dev/null; then
     PACKAGES+=("sudo")
 fi
 
+if ! command -v sudo &>/dev/null; then
+    PACKAGES+=("Xvfb")
+fi
+
 if [[ ${#PACKAGES[@]} -gt 0 ]]; then
 
     log "Instalando dependencias: ${PACKAGES[*]}"
