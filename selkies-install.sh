@@ -91,8 +91,8 @@ if ! command -v sudo &>/dev/null; then
     PACKAGES+=("sudo")
 fi
 
-if ! command -v sudo &>/dev/null; then
-    PACKAGES+=("Xvfb")
+if ! command -v Xvfb &>/dev/null; then
+    PACKAGES+=("xvfb")
 fi
 
 if [[ ${#PACKAGES[@]} -gt 0 ]]; then
